@@ -1,11 +1,12 @@
-// https://github.com/fspoettel/advent-of-code-2022/blob/main/src/bin/01.rs
+// day 01
 
-use debug_rs::debug;
+// #![allow(warnings)]
+// use debug_rs::debug;
 use std::cmp::Reverse;
 
 type Input = Vec<u32>;
 
-fn parse(input: &str) -> Input {
+fn parse_input(input: &str) -> Input {
   input
     .split("\n\n")
     .map(|c| c.lines().filter_map(|l| l.parse::<u32>().ok()).sum())
@@ -13,15 +14,14 @@ fn parse(input: &str) -> Input {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-  let parsed = parse(input);
+  let parsed = parse_input(input);
   parsed.iter().max().copied()
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-  let mut parsed = parse(input);
+  let mut parsed = parse_input(input);
   parsed.sort_by_key(|k| Reverse(*k));
   let slice = &parsed[0..3];
-  debug!();
   return Some(slice.iter().sum::<u32>());
 }
 

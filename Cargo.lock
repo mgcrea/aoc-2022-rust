@@ -12,6 +12,7 @@ dependencies = [
  "itertools",
  "log 0.4.17",
  "pico-args",
+ "regex 1.7.1",
 ]
 
 [[package]]
