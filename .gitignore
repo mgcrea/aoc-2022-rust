@@ -12,3 +12,6 @@
 *.sln
 *.sw?
 .env
+
+# Project
+src/inputs/*

@@ -22,7 +22,7 @@ pub fn part_two(input: &str) -> Option<u32> {
   let mut parsed = parse_input(input);
   parsed.sort_by_key(|k| Reverse(*k));
   let slice = &parsed[0..3];
-  return Some(slice.iter().sum::<u32>());
+  Some(slice.iter().sum::<u32>())
 }
 
 fn main() {
