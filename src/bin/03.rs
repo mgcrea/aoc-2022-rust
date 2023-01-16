@@ -1,7 +1,7 @@
 // day 03
 
-#![allow(warnings)]
-use debug_rs::debug;
+// #![allow(warnings)]
+// use debug_rs::debug;
 use regex::Regex;
 use std::collections::HashSet;
 
